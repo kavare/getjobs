@@ -1,3 +1,16 @@
+// The configuration file for the application
+@import '../sass/base/settings';
+
+// All helper functions for html classes
+@import '../sass/utils/helper';
+
+// The gird and layout for pages
+@import '../sass/layouts/header';
+
+// Page specific styles
+@import '../sass/pages/home';
+
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;

@@ -14,7 +14,8 @@ module.exports = function(options) {
 
     gulp.watch([
       options.src + '/app/**/*.css',
-      options.src + '/app/**/*.scss'
+      options.src + '/app/**/*.scss',
+      options.src + '/sass/**/*.scss'
     ], function(event) {
       if(isOnlyChange(event)) {
         gulp.start('styles');
