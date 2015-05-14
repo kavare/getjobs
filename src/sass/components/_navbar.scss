@@ -1,0 +1,61 @@
+$navbar-height: 53.96px;
+
+.navbar {
+  background-color: $blue;
+  border: none;
+
+  .navbar-header {
+    .navbar-brand {
+      font-weight: bold;
+      color: $white;
+    }
+  }
+
+  .nav {
+    li > a {
+      padding: 1em 2em;
+      font-size: 1.2em;
+      color: $white;
+
+      &:hover {
+        background-color: darken($blue, 10%);
+        transition: all 0.2s ease-in;
+      }
+    }
+
+    .active > a {
+      font-weight: bold;
+      background-color: darken($blue, 20%);
+
+      &:hover {
+        background-color: darken($blue, 30%);
+        transition: all 0.2s ease-in;
+      }
+    }
+  }
+
+  .navbar-right {
+    height: $navbar-height;
+
+    > li {
+      line-height: $navbar-height;
+    }
+
+    .avatar-container {
+      overflow: hidden;
+      width: 2.5em;
+
+      .avatar {
+        width: 100%;
+        height: 100%;
+        border-radius: 5em;
+      }
+    }
+
+    .account {
+      margin: 0 1em;
+      font-size: 1.2em;
+      color: $white;
+    }
+  }
+}

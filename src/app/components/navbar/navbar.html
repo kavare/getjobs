@@ -1,20 +1,27 @@
 <nav class="navbar navbar-static-top navbar-inverse" ng-controller="NavbarCtrl as navbarCtrl">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="https://github.com/Swiip/generator-gulp-angular">
-        <span class="glyphicon glyphicon-home"></span> Neo Career
+      <a class="navbar-brand" href="#/" sref="home">
+        Neo Career
       </a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
       <ul class="nav navbar-nav">
-        <li class="active"><a ng-href="#">Dashboard</a></li>
-        <li><a ng-href="#">Wishlist</a></li>
-        <li><a ng-href="#">Mails</a></li>
+        <li ng-class="{ active: navbarCtrl.isActive('/dashboard')}">
+          <a ui-sref="dashboard">Dashboard</a>
+        </li>
+        <li ng-class="{ active: navbarCtrl.isActive('/wishlist')}">
+          <a ui-sref="wishlist">Wishlist</a>
+        </li>
+        <li ng-class="{ active: navbarCtrl.isActive('/progress')}">
+          <a ui-sref="progress">In Progress</a>
+        </li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        <li>Current date: {{ navbarCtrl.date | date:'yyyy-MM-dd' }}</li>
+        <li class="avatar-container"><img src="{{navbarCtrl.user.img}}" alt="{{navbarCtrl.user.account}}" class="avatar"></li>
+        <li class="account">{{navbarCtrl.user.account}}</li>
       </ul>
     </div>
   </div>
