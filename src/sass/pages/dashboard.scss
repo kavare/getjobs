@@ -1,0 +1,57 @@
+.page-dashboard {
+  .jumbo-title {
+    margin: -0.5em 0 1.2em;
+  }
+
+  .card-container {
+    min-height: 10em;
+    padding: 1.2em 0.5em;
+    border-radius: 10px;
+    background-color: $white;
+
+    .card-image {
+      float: left;
+      width: 20%;
+      margin-right: 5%;
+    }
+
+    .card-item {
+      float: left;
+      width: 75%;
+      display: table;
+      line-height: 2;
+
+      .item-title {
+        display: table-cell;
+        width: 25%;
+        font-weight: bold;
+        vertical-align: middle;
+      }
+
+      .item-content {
+        display: table-cell;
+        width: 70%;
+        line-height: 1.6;
+      }
+    }
+  }
+
+  .alert {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 35em;
+  }
+
+  .table {
+    td {
+      vertical-align: middle;
+    }
+
+    .form-control[disabled] {
+      border: none;
+      color: $black;
+      background-color: transparent;
+    }
+  }
+}
