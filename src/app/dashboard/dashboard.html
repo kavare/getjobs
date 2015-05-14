@@ -97,7 +97,10 @@
           <input type="text" required name="likes" ng-model="dashboardCtrl.temp.likes" class="form-control">
         </td>
         <td>
-          <a ng-click="dashboardCtrl.addToList()" class="btn btn-success">Add</a>
+          <a ng-click="dashboardCtrl.addToList()" class="btn btn-success"
+             ng-disabled="!dashboardCtrl.temp.company || !dashboardCtrl.temp.date || !dashboardCtrl.temp.address || !dashboardCtrl.temp.likes" >
+             Add
+          </a>
         </td>
       </tr>
     </table>
