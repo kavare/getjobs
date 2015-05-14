@@ -77,7 +77,7 @@
         <td><input type="text" value="{{company.address}}" ng-disabled="!company.editable" class="form-control"></td>
         <td><input type="text" value="{{company.likes}}" ng-disabled="!company.editable" class="form-control"></td>
         <td>
-          <a ng-click="dashboardCtrl.addToGo($index)" class="btn btn-success">Add</a>
+          <a ng-click="dashboardCtrl.addToGo($index)" class="btn btn-success">Go</a>
           <a ng-click="dashboardCtrl.editItem($index)" class="btn btn-info">{{company.editText}}</a>
           <a ng-click="dashboardCtrl.deleteItem($index)" class="btn btn-danger">Delete</a>
         </td>
@@ -85,16 +85,16 @@
       <tr>
         <td><img src="assets/images/angular.png" alt="default" ng-model="dashboardCtrl.temp"></td>
         <td>
-          <input type="text" name="company" ng-model="dashboardCtrl.temp.company" class="form-control">
+          <input type="text" required name="company" ng-model="dashboardCtrl.temp.company" class="form-control">
         </td>
         <td>
-          <input type="text" name="date" ng-model="dashboardCtrl.temp.date" class="form-control">
+          <input type="date" required name="date" ng-model="dashboardCtrl.temp.date" class="form-control">
         </td>
         <td>
-          <input type="text" name="address" ng-model="dashboardCtrl.temp.address" class="form-control">
+          <input type="address" required name="address" ng-model="dashboardCtrl.temp.address" class="form-control">
         </td>
         <td>
-          <input type="text" name="likes" ng-model="dashboardCtrl.temp.likes" class="form-control">
+          <input type="text" required name="likes" ng-model="dashboardCtrl.temp.likes" class="form-control">
         </td>
         <td>
           <a ng-click="dashboardCtrl.addToList()" class="btn btn-success">Add</a>

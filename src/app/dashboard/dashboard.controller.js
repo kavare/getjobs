@@ -69,6 +69,8 @@ angular
       date:    '',
       address: '',
       likes:   '',
+      editable:false,
+      editText:'Edit',
       intro:   'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, est blanditiis quis! Labore perspiciatis enim nihil ut voluptate dicta dolorum!'
     };
 
@@ -113,6 +115,8 @@ angular
         date:    '',
         address: '',
         likes:   '',
+        editable:false,
+        editText:'Edit',
         intro:   'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, est blanditiis quis! Labore perspiciatis enim nihil ut voluptate dicta dolorum!'
       };
     };
