@@ -14,7 +14,8 @@ angular
         date:    iso[1] +  ' '+ iso[2],
         address: 'Mountain View 1600 Amphitheatre Parkway Mountain View, CA',
         likes:   3,
-        disabled: true,
+        editable:false,
+        editText:'Edit',
         intro:   'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, est blanditiis quis! Labore perspiciatis enim nihil ut voluptate dicta dolorum!'
       },
       {
@@ -23,7 +24,8 @@ angular
         date:    '2015-05-15 09:30',
         address: 'Mountain View 1601 Amphitheatre Parkway Mountain View, CA',
         likes:   1,
-        disabled: true,
+        editable:false,
+        editText:'Edit',
         intro:   'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, est blanditiis quis! Labore perspiciatis enim nihil ut voluptate dicta dolorum!'
       },
       {
@@ -32,7 +34,8 @@ angular
         date:    '2015-05-16 011:30',
         address: 'Mountain View 1602 Amphitheatre Parkway Mountain View, CA',
         likes:   2,
-        disabled: true,
+        editable:false,
+        editText:'Edit',
         intro:   'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, est blanditiis quis! Labore perspiciatis enim nihil ut voluptate dicta dolorum!'
       },
       {
@@ -41,7 +44,8 @@ angular
         date:    '2015-05-17 014:00',
         address: 'Mountain View 1603 Amphitheatre Parkway Mountain View, CA',
         likes:   4,
-        disabled: true,
+        editable:false,
+        editText:'Edit',
         intro:   'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, est blanditiis quis! Labore perspiciatis enim nihil ut voluptate dicta dolorum!'
       },
       {
@@ -50,7 +54,8 @@ angular
         date:    iso[1] +  ' '+ iso[2],
         address: '1 Infinite Loop Cupertino, CA 95014',
         likes:   5,
-        disabled: true,
+        editable:false,
+        editText:'Edit',
         intro:   'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, est blanditiis quis! Labore perspiciatis enim nihil ut voluptate dicta dolorum!'
       },
     ];
@@ -78,7 +83,8 @@ angular
 
     self.editItem = function(index) {
       var selected = self.companyList[index];
-      selected.disabled = false;
+      selected.editable = !selected.editable;
+      selected.editText = (selected.editable) ? 'OK' : 'Edit';
     };
 
     self.deleteItem = function(index) {

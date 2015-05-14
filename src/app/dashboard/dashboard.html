@@ -72,13 +72,13 @@
       </tr>
       <tr ng-repeat="company in dashboardCtrl.companyList">
         <td><img src="{{company.image}}" alt="{{company.company}}"></td>
-        <td><input type="text" value="{{company.company}}" ng-disabled="{{company.disabled}}" class="form-control"></td>
-        <td><input type="text" value="{{company.date}}" ng-disabled="{{company.disabled}}" class="form-control"></td>
-        <td><input type="text" value="{{company.address}}" ng-disabled="{{company.disabled}}" class="form-control"></td>
-        <td><input type="text" value="{{company.likes}}" ng-disabled="{{company.disabled}}" class="form-control"></td>
+        <td><input type="text" value="{{company.company}}" ng-disabled="!company.editable" class="form-control"></td>
+        <td><input type="text" value="{{company.date}}" ng-disabled="!company.editable" class="form-control"></td>
+        <td><input type="text" value="{{company.address}}" ng-disabled="!company.editable" class="form-control"></td>
+        <td><input type="text" value="{{company.likes}}" ng-disabled="!company.editable" class="form-control"></td>
         <td>
           <a ng-click="dashboardCtrl.addToGo($index)" class="btn btn-success">Add</a>
-          <!-- <a ng-click="dashboardCtrl.editItem($index)" class="btn btn-info">Edit</a> -->
+          <a ng-click="dashboardCtrl.editItem($index)" class="btn btn-info">{{company.editText}}</a>
           <a ng-click="dashboardCtrl.deleteItem($index)" class="btn btn-danger">Delete</a>
         </td>
       </tr>
