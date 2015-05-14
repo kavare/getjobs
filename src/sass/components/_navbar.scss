@@ -1,10 +1,16 @@
 $navbar-height: 53.96px;
 
 .navbar {
-  position: fixed;
   width: 100%;
+  margin-bottom: 0;
   border: none;
   background-color: $blue;
+
+  &.fixed {
+    position: fixed;
+    background-color: rgba($blue, .7);
+    transition: all 0.2s ease-in;
+  }
 
   .navbar-header {
     .navbar-brand {
