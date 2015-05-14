@@ -1,8 +1,11 @@
 'use strict';
 
-angular.module('neocareer')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
+angular
+  .module('neocareer')
+  .controller('MainCtrl', ['$scope', function ($scope) {
+    var self = this;
+
+    self.awesomeThings = [
       {
         'title': 'AngularJS',
         'url': 'https://angularjs.org/',
@@ -61,4 +64,4 @@ angular.module('neocareer')
     angular.forEach($scope.awesomeThings, function(awesomeThing) {
       awesomeThing.rank = Math.random();
     });
-  });
+  }]);

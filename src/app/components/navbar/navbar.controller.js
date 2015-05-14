@@ -1,6 +1,9 @@
 'use strict';
 
-angular.module('neocareer')
-  .controller('NavbarCtrl', function ($scope) {
-    $scope.date = new Date();
-  });
+angular
+  .module('neocareer')
+  .controller('NavbarCtrl', [function () {
+    var self = this;
+
+    self.date = new Date();
+  }]);

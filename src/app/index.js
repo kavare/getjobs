@@ -6,7 +6,7 @@ angular.module('neocareer', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 
       .state('home', {
         url: '/',
         templateUrl: 'app/main/main.html',
-        controller: 'MainCtrl'
+        controller: 'MainCtrl as mainCtrl'
       });
 
     $urlRouterProvider.otherwise('/');

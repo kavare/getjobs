@@ -7,24 +7,13 @@
 // The gird and layout for pages
 @import '../sass/layouts/header';
 
+// Component styles
+@import '../sass/components/navbar';
+@import '../sass/components/panel';
+
 // Page specific styles
 @import '../sass/pages/home';
 
-
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
-
-.thumbnail {
-  height: 200px;
-
-  img.pull-right {
-    width: 50px;
-  }
-}
 
 /* Do not remove this comments bellow. It's the markers used by gulp-inject to inject
    all your sass files automatically */
