@@ -1,8 +1,4 @@
 .page-dashboard {
-  .page-title {
-    margin-bottom: 1em;
-  }
-
   .jumbo-title {
     margin: -0.5em 0 1.2em;
   }
@@ -47,9 +43,15 @@
     min-width: 35em;
   }
 
-  .form-control[disabled] {
-    border: none;
-    color: $black;
-    background-color: transparent;
+  .table {
+    td {
+      vertical-align: middle;
+    }
+
+    .form-control[disabled] {
+      border: none;
+      color: $black;
+      background-color: transparent;
+    }
   }
 }
