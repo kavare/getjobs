@@ -1,11 +1,107 @@
 <div ng-include="'app/components/navbar/navbar.html'"></div>
+<div class="container page-dashboard" ng-controller="DashboardCtrl as dashboardCtrl">
+  <alert ng-repeat="alert in dashboardCtrl.alerts" type="{{alert.type}}" close="dashboardCtrl.closeAlert($index)">
+    {{alert.msg}}
+  </alert>
 
-<div class="container">
   <div class="row">
-    <h1>Dashboard</h1>
+    <div class="col-sm-12">
+      <h1 class="page-title">Career Dashboard</h1>
+    </div>
+    <div class="col-sm-12">
+      <div class="jumbotron">
+        <div class="row">
+          <div class="col-sm-6">
+            <h2 class="jumbo-title">Next Interview:</h2>
+          </div>
+          <div class="col-sm-6">
+            <h2 class="jumbo-title">Next to go:</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6 card-container">
+            <div class="card">
+              <img src="{{dashboardCtrl.coming.image}}" alt="Yeoman" class="card-image">
+              <div class="card-item">
+                <div class="item-title">Company:</div>
+                <div class="item-content">{{dashboardCtrl.coming.company}}</div>
+              </div>
+              <div class="card-item">
+                <div class="item-title">Date:</div>
+                <div class="item-content">{{dashboardCtrl.coming.date}}</div>
+              </div>
+              <div class="card-item">
+                <div class="item-title">Address:</div>
+                <div class="item-content">{{dashboardCtrl.coming.address}}</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 card-container">
+            <div class="card">
+              <img src="{{dashboardCtrl.toGo.image}}" alt="Yeoman" class="card-image">
+              <div class="card-item">
+                <div class="item-title">Company:</div>
+                <div class="item-content">{{dashboardCtrl.toGo.company}}</div>
+              </div>
+              <div class="card-item">
+                <div class="item-title">Date:</div>
+                <div class="item-content">{{dashboardCtrl.toGo.date}}</div>
+              </div>
+              <div class="card-item">
+                <div class="item-title">Address:</div>
+                <div class="item-content">{{dashboardCtrl.toGo.address}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <hr>
+  <div class="panel panel-default">
+    <div class="panel-heading">Copmany List</div>
+
+    <table class="table table-striped table-hover">
+      <tr>
+        <th></th>
+        <th>Company</th>
+        <th>Date</th>
+        <th>Address</th>
+        <th>Likes</th>
+        <th></th>
+      </tr>
+      <tr ng-repeat="company in dashboardCtrl.companyList">
+        <td><img src="{{company.image}}" alt="{{company.company}}"></td>
+        <td><input type="text" value="{{company.company}}" ng-disabled="{{company.disabled}}" class="form-control"></td>
+        <td><input type="text" value="{{company.date}}" ng-disabled="{{company.disabled}}" class="form-control"></td>
+        <td><input type="text" value="{{company.address}}" ng-disabled="{{company.disabled}}" class="form-control"></td>
+        <td><input type="text" value="{{company.likes}}" ng-disabled="{{company.disabled}}" class="form-control"></td>
+        <td>
+          <a ng-click="dashboardCtrl.addToGo($index)" class="btn btn-success">Add</a>
+          <!-- <a ng-click="dashboardCtrl.editItem($index)" class="btn btn-info">Edit</a> -->
+          <a ng-click="dashboardCtrl.deleteItem($index)" class="btn btn-danger">Delete</a>
+        </td>
+      </tr>
+      <tr>
+        <td><img src="assets/images/angular.png" alt="default" ng-model="dashboardCtrl.temp"></td>
+        <td>
+          <input type="text" name="company" ng-model="dashboardCtrl.temp.company" class="form-control">
+        </td>
+        <td>
+          <input type="text" name="date" ng-model="dashboardCtrl.temp.date" class="form-control">
+        </td>
+        <td>
+          <input type="text" name="address" ng-model="dashboardCtrl.temp.address" class="form-control">
+        </td>
+        <td>
+          <input type="text" name="likes" ng-model="dashboardCtrl.temp.likes" class="form-control">
+        </td>
+        <td>
+          <a ng-click="dashboardCtrl.addToList()" class="btn btn-success">Add</a>
+        </td>
+      </tr>
+    </table>
+  </div>
 
 </div>
 <div ng-include="'app/components/footer/footer.html'"></div>
