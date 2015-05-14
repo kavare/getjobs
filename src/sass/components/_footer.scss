@@ -1,0 +1,12 @@
+.footer {
+  width: 100%;
+  text-align: center;
+  background-color: $brand-secondary;
+
+  .copyright {
+    margin-bottom: 0;
+    padding: 1em;
+    font-size: 1.2em;
+    color: $white;
+  }
+}

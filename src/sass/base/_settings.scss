@@ -1,14 +1,28 @@
 //== Colors
 //
 //## Brand colors for use across Bootstrap.
-//
-$brand-primary:         darken(#1e86c9, 6.5%) !default; // #fff38d #337ab7
-$brand-success:         #9dd060 !default;
-$brand-info:            #92d5f9 !default;
-$brand-warning:         #ffd460 !default;
-$brand-danger:          #d9534f !default;
 
-$body-bg:               #fff38d !default;
+$red:                   #E16C6C !default;
+$orange:                #EC774B !default;
+$yellow:                #fff38d !default;
+$green:                 #6FC191 !default;
+$blue:                  #74CEE4 !default;
+$purple:                #C389CE !default;
+$gray:                  #9CADB6 !default;
+$black:                 #000000 !default;
+$white:                 #ffffff !default;
+
+$brand-primary:         darken($yellow, 6.5%) !default;
+$brand-primary-comp:    darken($blue, 6.5%) !default;
+$brand-secondary:       darken($green, 6.5%) !default;
+$brand-secondary-comp:  darken($orange, 6.5%) !default;
+
+$brand-alert:           darken($red, 0%);
+$brand-success:         darken($green, 0%);
+$brand-warning:         darken($orange, 0%);
+$brand-info:            darken($blue, 0%);
+
+$body-bg:               $yellow !default;
 // $text-color:            $gray-dark !default;
 // $link-color:            $brand-primary !default;
 // $link-hover-color:      darken($link-color, 15%) !default;

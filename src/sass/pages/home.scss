@@ -1,0 +1,46 @@
+@mixin jumbo-image($src) {
+  background: url('../assets/images/jumbo/#{$src}') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+}
+
+.jumbo-full {
+  position: relative;
+
+  .title-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 2em 4em;
+    background-color: $black;
+    transform: translate(-50%, -50%);
+    color: $white;
+
+    .section-title {
+      font-size: 4em;
+    }
+
+    .section-subtitle {
+      line-height: 2;
+    }
+  }
+
+  .btn-gta {
+    display: block;
+    margin-top: 1em;
+    font-size: 2em;
+    font-weight: bold;
+    background-color: $brand-primary;
+    color: $black;
+
+    &:hover {
+      background-color: darken($brand-primary, 15%);
+      color: $white;
+      transition: all 0.2s ease-in;
+    }
+  }
+}
+
+#section1 { @include jumbo-image('workbench.jpeg'); }
+#section2 { @include jumbo-image('friends.jpg'); }
+#section3 { @include jumbo-image('vision.jpeg'); }
